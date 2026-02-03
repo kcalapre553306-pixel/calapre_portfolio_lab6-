@@ -8,13 +8,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">MyPortfolio</a>
+        <a class="navbar-brand" href="#">My Portfolio</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,16 +36,49 @@
               <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#certifications">Certifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact">Contacts</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <section id="home" class="hero">
+      <style>
+        .hero {
+          background-image: url("images/background_header.webp");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          color: white;
+          position: relative;
+        }
+
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.5);
+          filter: blur(10px);
+        }
+
+        .hero .container {
+          position: relative;
+          z-index: 1;
+        }
+      </style>
+
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-start">
@@ -52,8 +91,7 @@
           <div class="col-md-6 text-center">
             <img
               src="images/profile.png"
-              class="img-fluid border border-light rounded"
-              style="max-width: 500px; margin: 100px;"
+              style="max-width: 500px; margin: 100px"
               alt="Profile"
             />
           </div>
@@ -62,7 +100,9 @@
     </section>
     <section id="services" class="section-padding">
       <div class="container">
-        <h2 class="text-center mb-5" style="text-decoration: underline;">My Services</h2>
+        <h2 class="text-center mb-5" style="text-decoration: underline; margin: 20px;">
+          My Services
+        </h2>
         <div class="row text-center">
           <div class="col-md-4">
             <div class="card p-4">
@@ -85,16 +125,83 @@
         </div>
       </div>
     </section>
+
+    <section id="certifications" class="section-padding bg-light">
+      <div class="container">
+        <h2
+          class="text-center mb-5"
+          style="margin: 30px; text-decoration: underline"
+        >
+          Certifications
+        </h2>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="card p-4">
+              <i class="bi bi-award fs-1 text-primary mb-3"></i>
+              <img src="images/sololearn.png" class="card-img-top" />
+              <h5>Solo Learn</h5>
+              <p>2025 Introduction to Python</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4">
+              <i class="bi bi-shield-lock fs-1 text-primary mb-3"></i>
+              <h5>Introduction to Cybersecurity</h5>
+              <p>Basic security concepts and threats</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4">
+              <i class="bi bi-patch-check fs-1 text-primary mb-3"></i>
+              <h5>IT Fundamentals</h5>
+              <p>Computer systems and networking basics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-padding">
+      <div class="container">
+        <h2
+          class="text-center mb-5"
+          style="margin: 10px; text-decoration: underline"
+        >
+          Education
+        </h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card p-4">
+              <h4>Bachelor of Science in Information Technology</h4>
+              <p class="mb-1">
+                <strong
+                  >University of Mindanao / College of Computer
+                  Education</strong
+                >
+              </p>
+              <p class="text-muted">2024 – Present</p>
+              <p>
+                Focused on web development, programming fundamentals, and
+                information security concepts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projects" class="section-padding bg-light">
       <div class="container">
-        <h2 class="text-center mb-5 " style="margin: 30px; text-decoration: underline;">My Projects</h2>
+        <h2
+          class="text-center mb-5"
+          style="margin: 30px; text-decoration: underline"
+        >
+          My Projects
+        </h2>
         <div class="row">
           <div class="col-md-4">
             <div class="card">
-              <img
-                src="images/proj1.png"
-                class="card-img-top"
-              />
+              <img src="images/proj1.png" class="card-img-top" />
               <div class="card-body">
                 <h5>Login System</h5>
                 <p>Simple login page.</p>
@@ -103,10 +210,7 @@
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img
-                src="images/proj2.jpg"
-                class="card-img-top"
-              />
+              <img src="images/proj2.jpg" class="card-img-top" />
               <div class="card-body">
                 <h5>Game Developing</h5>
                 <p>Simple MOBA game luncher.</p>
@@ -115,10 +219,7 @@
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img
-                src="images/proj3.jpg"
-                class="card-img-top"
-              />
+              <img src="images/proj3.jpg" class="card-img-top" />
               <div class="card-body">
                 <h5>Cat Pet Shop</h5>
                 <p>Feeding Cat Simlutor.</p>
@@ -130,7 +231,12 @@
     </section>
     <section id="contact" class="section-padding">
       <div class="container">
-        <h2 class="text-center mb-5" style="margin: 30px; text-decoration: underline;">Contact Me</h2>
+        <h2
+          class="text-center mb-5"
+          style="margin: 30px; text-decoration: underline"
+        >
+          Contact Me
+        </h2>
         <div class="row justify-content-center">
           <div class="col-md-6">
             <form>
@@ -153,8 +259,24 @@
         </div>
       </div>
     </section>
-    <footer class="text-center py-4 bg-dark text-white">
-      <p class="mb-0">© 2026 Kurt Mclien A. Calapre | All Rights Reserved</p>
+    <footer class="text-center py-4">
+      <div class="container">
+        <div class="mb-3">
+          <a href="https://www.facebook.com/kurtmcliennn" class="me-3 fs-4"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://github.com/kcalapre553306-pixel" class="me-3 fs-4"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="images/linkedin_icon.png" class="me-3 fs-4"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="k.calapre.553306@umindanao.edu.ph" class="fs-4"
+            ><i class="bi bi-envelope-fill"></i
+          ></a>
+        </div>
+        <p class="mb-0">© 2026 Kurt Mclien Calapre | All Rights Reserved</p>
+      </div>
     </footer>
   </body>
 </html>
